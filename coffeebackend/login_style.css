@@ -1,0 +1,36 @@
+.mainboxlogin{
+    border: 2px solid black;
+    width: 22%;
+    align-items: center;
+    margin: 100px auto;
+    text-align: center;
+    padding: 130px 20px;
+    background-color: rgba(122, 58, 16, 0.76);
+}
+
+form .filed_input{
+    padding-bottom: 6px;
+    border-radius: 4px;
+}
+
+form .login_input{
+    padding: 6px 22px;
+    border-radius: 8px;
+}
+
+.loginHead{
+    margin-bottom: 18px;
+}
+.btn:hover{
+background-color: rgb(83, 78, 78);
+}
+.Regis{
+    font-size: 18px;
+}
+
+.Regis a{
+    color: azure;
+}
+.Regis a:hover{
+    color: rgb(94, 137, 41);
+}

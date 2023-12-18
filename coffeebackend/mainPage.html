@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+     <link rel="stylesheet" href="css/style.css"> 
+     <link rel="stylesheet" href="css/footerstyle.css">
+       <title>COFFEE SHOP</title>
+</head>
+
+<body>
+    <nav class="navbar background">
+        <ul class="nav-list">
+            <div class="logo"><a href="index.html"><img src="img/logo.jpg" alt="logo"></a></div>
+            <li><a href="mainPage.html">Home</a> </li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html" target="_blank">About</a> </li>
+            <li><a href="contact.html" target="_blank">Contact Us</a> </li>
+            <li><a href="login.php" target="">Log in</a> </li>
+        </ul>
+        <div class="rightnav">
+            <input type="text" name="search" id="search">
+            <button class="btn btn-sm">Search</button>
+        </div>
+
+    </nav>
+    <section>
+
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/2.jpg" class="d-block w-100" alt="image">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Drink With Pleasure</h5>
+                        <p>The finest coffee u will ever drink, made with premium African beans .</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/1.jpg" class="d-block w-100" alt="image">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Eat With Joy</h5>
+                        <p>Our donuts taste just delicoius and fresh all the time.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+    </section>
+    <section class="background firstsection">
+
+        <div class="box-main">
+            <div class="firsthalf">
+                <p class="text-big">We Serve The Best Coffee In Town...</p>
+                <p class="text-small">In Nepali, Sapana translates to dream.
+                    Everything in life begins with a dream. For our team at Sapana Coffee,
+                    this dream was to create opportunity in remote villages across Nepal.</p>
+            </div>
+            <div class="secondhalf">
+                <a href="coffee.html"><img src="img/loogo.jpg" alt="coffee"></a>
+
+            </div>
+        </div>
+        <div class="box-main">
+            <div class="firsthalf">
+                <p class="text-big">We Serve The Best Coffee In Town...</p>
+                <p class="text-small">In Nepali, Sapana translates to dream.
+                    Everything in life begins with a dream. For our team at Sapana Coffee,
+                    this dream was to create opportunity in remote villages across Nepal.</p>
+            </div>
+            <div class="secondhalf">
+                <a href="donut.html"><img src="img/donut.jpg" alt="coffee"></a>
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+    <!--for loading and hiding more items-->
+
+    <div id="coffee-list">
+        <!-- Your coffee items will be added here -->
+    </div>
+    <button id="load-more">Load More</button>
+
+    <script>
+        // Sample data for coffee items
+        const coffeeItems = [
+
+            "",
+            
+
+        ];
+
+        const coffeeList = document.getElementById("coffee-list");
+        const loadMoreButton = document.getElementById("load-more");
+        let itemsPerPage = 4; // Number of items to show at a time
+        let currentItemIndex = 0;
+        let showingMoreItems = false;
+
+        function loadMoreItems() {
+            if (!showingMoreItems) {
+                for (let i = 0; i < itemsPerPage; i++) {
+                    if (currentItemIndex < coffeeItems.length) {
+                        const coffeeItem = document.createElement("div");
+                        coffeeItem.className = "coffee-item";
+                        coffeeItem.textContent = coffeeItems[currentItemIndex];
+                        coffeeList.appendChild(coffeeItem);
+                        currentItemIndex++;
+                    } else {
+                        showingMoreItems = true;
+                        loadMoreButton.textContent = "Hide More";
+                        break;
+                    }
+                }
+            } else {
+                while (coffeeList.firstChild) {
+                    coffeeList.removeChild(coffeeList.firstChild);
+                }
+                currentItemIndex = 0;
+                showingMoreItems = false;
+                loadMoreButton.textContent = "Load More";
+            }
+        }
+
+        loadMoreButton.addEventListener("click", loadMoreItems);
+
+    </script>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="row">
+
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Privacy & Policy</a></li>
+                        <li><a href="#">Our serivices</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="coffee.html">Coffees</a></li>
+                        <li><a href="donut.html">Donuts</a></li>
+                    </ul>
+                </div>
+
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-link">
+                        <a href="https://web.facebook.com/?_rdc=1&_rdr" target="_blank" class="fa fa-facebook"></a>
+                        <a href="https://twitter.com/" class="fa fa-twitter"></a>
+                        <a href="https://www.instagram.com" class="fa fa-instagram"></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(143, 119, 89);
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.logo{
+    width:20%;
+    display: felx;
+    justify-content: center;
+    align-items: center;
+
+}
+.logo img{
+    width: 60%;
+    border-radius: 50px;
+
+} 
+.nav-list {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-list li{
+    list-style: none;
+    margin: 10px 12px;
+    
+}
+
+.nav-list li a{
+    text-decoration: none;
+    color: white;
+}
+.nav-list li a:hover{
+    color: rgba(0, 0, 0, 0.788);
+}
+
+.rightnav{
+    margin-left: auto;
+}
+
+#search{
+    padding: 4px;
+    font-size: 17px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 9px;
+}
+
+.background{
+    background: rgba(82, 35, 3, 0.76) /*url('../img/background.jpg')*/;
+    background-size: cover;
+
+}
+.firstsection{
+    height: 100vh;
+}
+
+.box-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 50%;
+    margin: auto;
+    height: 40%;
+}
+.firsthalf{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.secondhalf{
+    width: 30%;
+}
+.secondhalf img{
+    width: 100%;
+    border-radius: 150px;
+    display: block;
+    margin: auto;
+}
+
+.text-big{
+    font-size: 33px;
+}
+
+.text-small{
+    font-size: 17px;
+
+}
+.box-main .secondhalf img:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+}
+.btn{
+    padding: 6px 15px;
+    margin: 7px 0;
+    border: 2px solid rgba(255, 255, 255, 0.89);
+    border-radius: 25px;
+    font-size: 18px;
+    background: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.btn-sm{
+    padding: 6px 10px;
+    vertical-align: middle;
+}
+
+.donut :hover{
+    opacity: 0.8;
+}
+                                        /* Styling for about Page */
+                                        
+                                        
+                                        
+.black-coffee{
+
+    width: 600px;
+    height: 200px;
+    
+    
+}
+
+.cream-coffee{
+    width: 600px;
+    height: 200px;
+    
+}
+
+.donuts{
+    width: 1000px;
+    height: 00px;
+    
+}
+
+
+                                      /*for more items */
+
+
+
+  /* Style for your coffee items */
+  .coffee-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 10px;
+}
+/* Style for the "Load More" button */
+#load-more {
+    background-color: #ffaa00;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+.p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.heading{
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    background-color:rgba(122, 58, 16, 0.76) ;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.container .menu-h2{
+    display: inline;
+    margin: 160px 61px 164px 64px;
+}
+.card{
+    background-color: #ccc;
+    width: 300px;
+    
+    margin: 10px;
+    border-radius: 15px 15px;
+}
+.card h2{
+    text-align: center;
+}
+.card p{
+    padding: 10px;
+}
+
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+/*.card-image{
+    margin-bottom: 10px;
+    border-radius: 15px;
+    height: 220px;
+    width: 200px;
+}*/
